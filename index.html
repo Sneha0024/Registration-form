@@ -34,7 +34,7 @@
     <script>
      
      
-      $("#submit").click(function(response){
+      $("#submit").click(function(){
       
 var name = $("#name").val();
 var dob = $("#dob").val();
@@ -43,10 +43,10 @@ alert("Thanks For Registering! "+name+"\nBorn on "+dob+"\nYour IP Address "+resp
 }
 })
     
-      $.ajax({
-url:"https://ipinfo.io",
-dataType:"json",
-})
+      $.get("https://ipinfo.io",function(response){
+
+alert(response.ip);
+},"json")
     
     </script>
   </body>
