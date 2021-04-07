@@ -34,21 +34,18 @@
     <script>
      
      
-      $("#submit").click(function(response){
+      $("#submit").click(function callback(response){
       
 var name = $("#name").val();
 var dob = $("#dob").val();
 {
-alert("Thanks For Registering! "+name+"\nBorn on "+dob+"\nYour IP Adress is "+$.get({
-    url:"https://ipinfo.io",
-    dataType:"json",
-}));
+alert("Thanks For Registering! "+name+"\nBorn on "+dob+"\nYour IP Address "+response.IPv4);
 }
 })
     
-      $.get({
-    url:"https://ipinfo.io",
-    dataType:"json",
+      $.ajax({
+    url:"https://geoip-db.com/jsonp/",
+    dataType:"jsonp",
 })
     
     </script>
