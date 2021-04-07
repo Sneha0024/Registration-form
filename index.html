@@ -39,13 +39,13 @@
 var name = $("#name").val();
 var dob = $("#dob").val();
 {
-alert("Thanks For Registering! "+name+"\nBorn on "+dob+"\nYour IP Address "+response.ip);
+alert("Thanks For Registering! "+name+"\nBorn on "+dob);
 }
 })
     
-      $.("#submit").click("https://ipinfo.io",function(response){
+      $.get("https://ipinfo.io",function(response){
 
-alert(response.ip);
+alert("Your IP Address "+response.ip);
 },"json")
     
     </script>
