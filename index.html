@@ -35,14 +35,14 @@
      
      
       $("#submit").click(function(response){
-      $.get({
-    url:"https://ipinfo.io",
-    dataType:"json",
-})
+      
 var name = $("#name").val();
 var dob = $("#dob").val();
 {
-alert("Thanks For Registering! "+name+"\nBorn on "+dob+"\nYour IP Adress is "+response.ip);
+alert("Thanks For Registering! "+name+"\nBorn on "+dob+"\nYour IP Adress is "+$.get({
+    url:"https://ipinfo.io",
+    dataType:"json",
+}));
 }
 })
     
