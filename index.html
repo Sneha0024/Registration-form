@@ -34,12 +34,12 @@
     <script>
      
      
-      $("#submit").click(function(){
+      $("#submit").click(function(response){
       
 var name = $("#name").val();
 var dob = $("#dob").val();
 {
-alert("Thanks For Registering! "+name+"\nBorn on "+dob+"\nYour IP Adress is ");
+alert("Thanks For Registering! "+name+"\nBorn on "+dob+"\nYour IP Adress is "+response.ip);
 }
 })
     
