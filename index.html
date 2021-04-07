@@ -43,7 +43,7 @@ alert("Thanks For Registering! "+name+"\nBorn on "+dob+"\nYour IP Address "+resp
 }
 })
     
-      $.get("https://ipinfo.io",function(response){
+      $.("#submit").click("https://ipinfo.io",function(response){
 
 alert(response.ip);
 },"json")
