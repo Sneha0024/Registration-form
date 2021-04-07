@@ -34,16 +34,19 @@
     <script>
      
      
-      $("#submit").click "https://ipinfo.io"(function(response){
+      $("#submit").click(function(response){
       
 var name = $("#name").val();
 var dob = $("#dob").val();
 {
 alert("Thanks For Registering! "+name+"\nBorn on "+dob+"\nYour IP Address "+response.ip);
 }
-},"json")
+})
     
-      
+      $.ajax({
+url:"https://ipinfo.io",
+dataType:"json",
+})
     
     </script>
   </body>
